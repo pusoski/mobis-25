@@ -24,10 +24,11 @@ class ExamCard extends StatelessWidget {
     final Color iconColor = isPast
         ? Colors.grey.shade600
         : Colors.deepPurple.shade100;
+    final double sideHeight = isPast ? 0 : 60;
 
     final cardColor = isPast
         ? Colors.grey.shade900
-        : Colors.deepPurple.shade700; // default card color from theme
+        : Colors.deepPurple.shade700;
 
     return Card(
       color: cardColor,
@@ -35,10 +36,9 @@ class ExamCard extends StatelessWidget {
       elevation: 3,
       child: Row(
         children: [
-          // colored side accent
           Container(
             width: 5,
-            height: 80,
+            height: sideHeight,
             decoration: BoxDecoration(
               color: sideColor,
               borderRadius: BorderRadius.circular(20),
@@ -46,7 +46,7 @@ class ExamCard extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -54,7 +54,7 @@ class ExamCard extends StatelessWidget {
                     exam.title,
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w800,
                       color: titleColor,
                     ),
                   ),
@@ -80,24 +80,6 @@ class ExamCard extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                           color: labelColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Icon(Icons.room_outlined, size: 20, color: iconColor),
-                      const SizedBox(width: 8),
-                      Flexible(
-                        child: Text(
-                          exam.rooms.join(', '),
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: labelColor,
-                          ),
                         ),
                       ),
                     ],
