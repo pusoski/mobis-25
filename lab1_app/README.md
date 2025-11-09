@@ -1,16 +1,13 @@
-# lab1_app
+# Мобилни Информациски Системи - Лабораториска вежба 1
 
-A new Flutter project.
+## Видео
+Демонстративното видео е достапно [тука](https://finkiukim-my.sharepoint.com/:v:/g/personal/hristijan_pusoski_students_finki_ukim_mk/EeB4EvJdmr9LoSasMiKlqcEBI6pEVxEPYBitufCr8DXwcQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tWWtg5).
 
-## Getting Started
+## Почетен екран
+[![Почетен екран](./readme_media/lab1_screenshot1.png)]()
 
-This project is a starting point for a Flutter application.
+## Екран: Изминат испит
+[![Екран: Изминат испит](./readme_media/lab1_screenshot2.png)]()
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Екран: Претстоечки испит
+[![Екран: Претстоечки испит](./readme_media/lab1_screenshot3.png)]()
