@@ -104,12 +104,18 @@ class _MealsByCategoryScreenState extends State<MealsByCategoryScreen> {
               onRefresh: _load,
               child: _meals.isEmpty
                   ? ListView(
-                      physics:
-                          const AlwaysScrollableScrollPhysics(),
+                      physics: const AlwaysScrollableScrollPhysics(),
                       children: [
                         const SizedBox(height: 160),
                         Center(
-                          child: Text('No meals found in ${widget.category}.'),
+                          child: Text(
+                            'No results found.',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.deepOrange.shade300,
+                            ),
+                          ),
                         ),
                       ],
                     )

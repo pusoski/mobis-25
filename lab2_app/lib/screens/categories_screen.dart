@@ -84,10 +84,9 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(
-              right: 16,
-            ),
+            padding: const EdgeInsets.only(top: 3, right: 16),
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const Text(
                   'Feeling Lucky?',
@@ -103,6 +102,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             ),
           ),
         ],
+
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(75),
           child: Padding(
@@ -128,7 +128,16 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                       physics: const AlwaysScrollableScrollPhysics(),
                       children: [
                         const SizedBox(height: 160),
-                        Center(child: Text('No categories found.')),
+                        Center(
+                          child: Text(
+                            'No results found.',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.deepOrange.shade300,
+                            ),
+                          ),
+                        ),
                       ],
                     )
                   : ListView.builder(
