@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../services/meal_api_service.dart';
 import '../models/meal_summary.dart';
 import '../widgets/meal_grid_tile.dart';
+import 'favorites_screen.dart';
 import 'meal_detail_screen.dart';
 import 'package:logger/logger.dart';
 
@@ -83,6 +84,28 @@ class _MealsByCategoryScreenState extends State<MealsByCategoryScreen> {
           widget.category,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(top: 3, right: 16),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.favorite),
+                  color: Colors.deepOrange.shade600,
+                  tooltip: 'Favorites',
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const FavoritesScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(75),
           child: Padding(
@@ -113,7 +136,7 @@ class _MealsByCategoryScreenState extends State<MealsByCategoryScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: Colors.deepOrange.shade300,
+                              color: Colors.deepOrange.shade200,
                             ),
                           ),
                         ),

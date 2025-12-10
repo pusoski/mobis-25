@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../services/meal_api_service.dart';
 import '../models/category.dart';
 import '../widgets/category_card.dart';
+import 'favorites_screen.dart';
 import 'meals_by_category_screen.dart';
 import 'meal_detail_screen.dart';
 import 'package:logger/logger.dart';
@@ -88,12 +89,21 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  'Feeling Lucky?',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                IconButton(
+                  icon: const Icon(Icons.favorite),
+                  tooltip: 'Favorites',
+                  color: Colors.deepOrange.shade600,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const FavoritesScreen(),
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(width: 8),
                 IconButton(
+                  color: Colors.deepOrange.shade600,
                   tooltip: 'Random Recipe',
                   icon: const Icon(Icons.shuffle),
                   onPressed: _openRandom,
@@ -134,7 +144,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
-                              color: Colors.deepOrange.shade300,
+                              color: Colors.deepOrange.shade200,
                             ),
                           ),
                         ),

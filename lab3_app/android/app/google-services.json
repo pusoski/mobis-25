@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224939717590",
+    "project_id": "lab3-ff960",
+    "storage_bucket": "lab3-ff960.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224939717590:android:41da0b201eeeda160fea77",
+        "android_client_info": {
+          "package_name": "com.example.lab2_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdVr2-v_KUZzV_PPcWDdCzFgS7SlyI1Ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
